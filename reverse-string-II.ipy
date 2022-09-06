@@ -1,0 +1,45 @@
+class Solution(object):
+    def reverseStr(self, s, k):
+        """
+        :type s: str
+        :type k: int
+        :rtype: str
+        """
+        
+        new_str = ''
+        
+        i = 0
+        
+        size = len(s)
+        
+        diff_string_len = len(s)%(2*k) 
+        
+        inc_string_len = len(s) - diff_string_len
+
+        if len(s) <= k :
+
+            new_str = s[::-1]
+
+            return new_str
+        
+        for x in range(0, int(inc_string_len/(2 * k))):
+            
+            updated_str = s[i:2 * k * (x + 1)]
+            
+            new_str = new_str + updated_str[:k][::-1] + updated_str[-k:]
+
+            i = 2 * k * (x + 1)
+
+        if diff_string_len > 0:
+            
+            non_inc_str = s[-diff_string_len:]
+            
+            if diff_string_len > k:
+                
+                new_str = new_str + non_inc_str[:k][::-1] + non_inc_str[k:]
+
+            else:
+                
+                new_str = new_str + non_inc_str[:k][::-1]
+                 
+        return new_str
