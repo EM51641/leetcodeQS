@@ -1,3 +1,8 @@
+##Cumbersome
+from decimal import Overflow
+from turtle import left
+
+
 class Solution(object):
     def reverseStr(self, s, k):
         """
@@ -43,3 +48,6 @@ class Solution(object):
                 new_str = new_str + non_inc_str[:k][::-1]
                  
         return new_str
+
+
+
