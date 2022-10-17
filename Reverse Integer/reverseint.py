@@ -17,7 +17,8 @@ class Solution(object):
             is_neg = True
 
         else:
-            # To: 0b011111111111111111111111111111111
+            # To:
+            # 0b011111111111111111111111111111111
             neutralnb = '2147483647'
             revstr = string[::-1].lstrip('0')
             is_neg = False
@@ -35,7 +36,7 @@ class Solution(object):
                     pass
 
                 else:
-                    break 
+                    break
 
         if is_neg:
             revstr = '-' + revstr
