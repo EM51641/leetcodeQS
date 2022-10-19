@@ -17,7 +17,7 @@ class Solution(object):
         :type b: str
         :rtype: str
         """
-        summation = int(a, 2) + int(b, 2)  # sum_bin(a) +  sum_bin(b)
+        summation = int(a, 2) + int(b, 2)
 
         if summation == 0:
             return '0'
