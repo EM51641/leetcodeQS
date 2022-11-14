@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+MergeSort/
 
 # Spyder project settings
 .spyderproject
