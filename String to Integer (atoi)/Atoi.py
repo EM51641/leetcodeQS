@@ -60,18 +60,17 @@ class Solution(object):
                     else:
                         continue
 
-                if sign == -1 and val < -1:
+                if sign == -1 and val < 0:
                     if int_began is False:
                         int_began = True
                         signed = True
-
-                    val = int(val/10)
+                    val = val//10
 
                 elif sign == 1 and val > 0:
                     if int_began is False:
                         int_began = True
                         signed = True
-                    val = int(val/10)
+                    val = val//10
 
                 if val == 0 or val == -1:
 
@@ -80,10 +79,11 @@ class Solution(object):
 
                     elif sign == 1:
 
-                        if number > int(extrem_val/10):
+                        if number > extrem_val//10:
                             return extrem_val
 
-                        elif number == int(extrem_val/10) and int(char) > 7:
+                        elif (number == extrem_val//10 
+                                and int(char) > 7):
                             return extrem_val
 
                         else:
@@ -92,12 +92,12 @@ class Solution(object):
 
                     elif sign == -1:
 
-                        if number - 1 < int(extrem_val/10):
+                        if number < extrem_val//10:
                             return extrem_val
 
                         # - 1 is added because Python rounds to the lower
                         # integer
-                        elif (number - 1 == int(extrem_val/10)
+                        elif (number - 1 == extrem_val//10
                                 and int(char) > 8):
                             return extrem_val
 
