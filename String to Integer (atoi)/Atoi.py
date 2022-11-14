@@ -20,7 +20,7 @@ class Solution(object):
         MIN_INTEGER = -2147483648
 
         sign = 1
-        val = EXTREME_VAL = MAX_INTEGER
+        val = extrem_val = MAX_INTEGER
 
         signed = False
         int_began = False
@@ -35,7 +35,7 @@ class Solution(object):
                     signed = True
                     if char == '-':
                         sign = - 1
-                        val = EXTREME_VAL = MIN_INTEGER
+                        val = extrem_val = MIN_INTEGER
 
                 elif (
                     char in ('-', '+') and (
@@ -76,15 +76,15 @@ class Solution(object):
                 if val == 0 or val == -1:
 
                     if len(s) - 1 > i and s[i + 1].isdigit():
-                        return EXTREME_VAL
+                        return extrem_val
 
                     elif sign == 1:
 
-                        if number > int(EXTREME_VAL/10):
-                            return EXTREME_VAL
+                        if number > int(extrem_val/10):
+                            return extrem_val
 
-                        elif number == int(EXTREME_VAL/10) and int(char) > 7:
-                            return EXTREME_VAL
+                        elif number == int(extrem_val/10) and int(char) > 7:
+                            return extrem_val
 
                         else:
                             number = number * 10 + int(char)
@@ -92,14 +92,14 @@ class Solution(object):
 
                     elif sign == -1:
 
-                        if number - 1 < int(EXTREME_VAL/10):
-                            return EXTREME_VAL
+                        if number - 1 < int(extrem_val/10):
+                            return extrem_val
 
                         # - 1 is added because Python rounds to the lower
                         # integer
-                        elif (number - 1 == int(EXTREME_VAL/10)
+                        elif (number - 1 == int(extrem_val/10)
                                 and int(char) > 8):
-                            return EXTREME_VAL
+                            return extrem_val
 
                         else:
                             number = number * 10 - int(char)
