@@ -1,8 +1,9 @@
 """
 a: number of words
 b: length of words
+c: set of words
 
-Time Complexity: O((N - a * b) *  a * b) -> O(N)
+Time Complexity: O((N * c - a * b) *  a * b + N) -> O(N)
 
 We iterate over N - a * b
 We subiterate through words (Complexity O(a))
