@@ -82,7 +82,7 @@ class Solution(object):
                         if number > extrem_val//10:
                             return extrem_val
 
-                        elif (number == extrem_val//10 
+                        elif (number == extrem_val//10
                                 and int(char) > 7):
                             return extrem_val
 
